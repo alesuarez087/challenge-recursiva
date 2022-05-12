@@ -1,0 +1,16 @@
+<div class="row"> 
+  <div class="col-sm-4" id="cargaArchivo">
+    <div class="card">
+      <div class="card-body" *ngIf="!cargados">
+        <h5 class="card-title">Cargar Archivo</h5>
+        <p class="card-text">Ingrese un archivo de extensión .csv</p>
+        <input type="file" class="form-control" #fileImportInput name="File Upload" id="csvFileUpload" (change)="fileChangeListener($event)" accept=".csv" />
+      </div>
+      
+      <div class="card-body" *ngIf="cargados">
+        <h5 class="card-title">Cargar Archivo</h5>
+        <p class="card-text">Archivo cargados correctamente</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<div class="mt-3">
+  <div class="mat-elevation-z8">
+    <mat-table [dataSource]="dataSource" >
+
+      <ng-container matColumnDef="Nombre">
+        <mat-header-cell  *matHeaderCellDef> Nombre </mat-header-cell>
+        <mat-cell *matCellDef="let item"> {{ item.nombre }} </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="Cantidad">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Cantidad </mat-header-cell>
+        <mat-cell  *matCellDef="let item"> {{ item.cantidad }} </mat-cell>
+      </ng-container>    
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let item; columns: displayedColumns;"></mat-row>
+
+    </mat-table>
+  </div>
+</div>

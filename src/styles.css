@@ -1,0 +1,50 @@
+html, body { 
+    height: 100%; 
+    justify-content: center;
+}
+
+body { 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", 
+    sans-serif; 
+}
+
+#navTop{ 
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    padding-inline-end: 40px;
+}
+
+#navButton{
+    
+    background-clip: padding-box;
+    border: 1px solid rgba(23,24,26,.11);
+    border-radius: 5px;
+    display: flex;
+}
+
+
+#cargaArchivo{
+    margin-left: 3%;
+    margin-top: 10%;
+}
+
+p {
+    margin-left: 1%;
+}
+
+.mat-header-cell{
+    font-weight: bold;
+}
+
+.mat-column-Nombre {
+    align-items: center;
+}
+
+
+.mat-table{
+    width: 75%;
+}

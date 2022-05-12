@@ -1,0 +1,54 @@
+
+<div class="mt-3">
+  <div class="mat-elevation-z8">
+    <mat-table [dataSource]="dataSource">
+
+      <ng-container matColumnDef="Equipo">
+        <mat-header-cell  *matHeaderCellDef> Equipo </mat-header-cell>
+        <mat-cell *matCellDef="let item"> {{ item.equipo }} </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="PromedioEdad">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Promedio de Edad </mat-header-cell>
+        <mat-cell  *matCellDef="let item"> {{ item.promedioEdad }} </mat-cell>
+      </ng-container>    
+
+      <ng-container matColumnDef="MenorEdad">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Menor Edad </mat-header-cell>
+        <mat-cell  *matCellDef="let item"> {{ item.menorEdad }} </mat-cell>
+      </ng-container>  
+
+      <ng-container matColumnDef="MayorEdad">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Mayor Edad </mat-header-cell>
+        <mat-cell  *matCellDef="let item"> {{ item.mayorEdad }} </mat-cell>
+      </ng-container>  
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let item; columns: displayedColumns;"></mat-row>
+
+    </mat-table>
+  </div>
+</div>
+
+<!--
+<div class="row">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Equipo</th>
+        <th scope="col">Promedio de Edad</th>
+        <th scope="col">Menor Edad</th>
+        <th scope="col">Mayor Edad</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let objeto of objetos">
+        <td>{{objeto.equipo}}</td>
+        <td>{{objeto.promedioEdad}}</td>
+        <td>{{objeto.menorEdad}}</td>
+        <td>{{objeto.mayorEdad}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+-->
